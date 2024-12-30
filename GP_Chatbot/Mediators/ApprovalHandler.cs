@@ -8,7 +8,7 @@ namespace GP_Chatbot.Mediators
     {
         public async Task Handle(ApprovalRequest request, CancellationToken cancellationToken)
         {
-            await chatService.SetMessgeApproval(request.MsgId, request.Approval);
+            await chatService.SetMessageApproval(request.MsgId, request.Approval);
         }
     }
 }

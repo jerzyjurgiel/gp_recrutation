@@ -44,7 +44,7 @@ namespace GP_Chatbot.Logic.Chatbot
             return newMsg;
         }
 
-        public async Task SetMessgeApproval(int msgId, bool? approval)
+        public async Task SetMessageApproval(int msgId, bool? approval)
         {
             var msg = await dbContext.Messages.Where(x => x.Id == msgId && x.IsAI).SingleOrDefaultAsync();
             if (msg == null)

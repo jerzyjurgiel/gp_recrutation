@@ -9,6 +9,6 @@ namespace GP_Chatbot.Logic.Chatbot
         Task<ChatMessageDto> CancelMessage(string msg, int? msgId);
 
         Task<IEnumerable<ChatMessageDto>> GetMessagesForChat(int chatId);
-        Task SetMessgeApproval(int msgId, bool? approval);
+        Task SetMessageApproval(int msgId, bool? approval);
     }
 }
