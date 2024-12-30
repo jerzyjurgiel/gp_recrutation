@@ -1,0 +1,23 @@
+<div class="message-container" 
+ [ngClass]="{'left': messageModel.isAI, 'right': !messageModel.isAI}">
+<div class="message">
+    <div class="message-text">
+      {{messageModel.message}}
+    </div>
+
+    <div class="message-footer">
+        <div  *ngIf="messageModel.isLoading"><button class="cancel-button" mat-raised-button (click)="cancelLoad()">Cancel</button></div>
+        <div *ngIf="!messageModel.isLoading && messageModel.isAI">
+            <button mat-flat-button class="aproval-btn" [ngClass]="{'active': messageModel.approval == false}" (click)="setApproval(false)">    
+                <mat-icon fontIcon="thumb_down"></mat-icon>
+            </button>
+            <button mat-flat-button class="aproval-btn" [ngClass]="{'active': messageModel.approval}" (click)="setApproval(true)">
+                <mat-icon fontIcon="thumb_up"></mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="scooped-corners scooped-corners-visibler"> </div>
+    <div class="scooped-corners scooped-corners-hider"> </div>
+  </div>
+</div>

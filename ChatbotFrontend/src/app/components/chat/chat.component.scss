@@ -1,0 +1,29 @@
+$chat-background-color: #e4e9ec;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  background-color: $chat-background-color;
+  padding: 1rem;
+}
+
+.chat__message{
+  margin-bottom: 1rem;
+}
+
+.chat-container{
+    height: calc(100% - 100px);
+    padding-bottom: 40px;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    height: 46px;
+    background-color: $chat-background-color;
+    width: 100%;
+}
+
+.send-button{
+    margin-left: 24px;
+}

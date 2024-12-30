@@ -1,0 +1,13 @@
+<div class="chat-container" #content>
+    <button mat-raised-button (click)="getMessages()"><mat-icon fontIcon="refresh"></mat-icon></button>
+    <ng-scrollbar>
+    <ng-container *ngFor="let msg of chatMessages" >
+        <message [messageModel]="msg" (cancelLoading)="CancelLoadingMsg()"></message>
+    </ng-container>
+</ng-scrollbar>
+
+</div>
+<div class="footer">
+    <input type="text" [(ngModel)]="msg"  (keyup.enter)="sendMessage()">
+    <button class="send-button" mat-raised-button (click)="sendMessage()" [disabled]="msg.length == 0" >Send Message</button>
+</div>
